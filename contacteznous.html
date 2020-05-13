@@ -2,15 +2,15 @@
 <html lang="fr" dir="ltr">
 
 <head>
-  <title> Ohmyfood! : Menus des plus grands restaurants new-yorkais</title>
+  <title> Ohmyfood! : Mentions légales</title>
 
   <!-- meta -->
   <meta charset="utf-8">
   <meta name="author" content="Gwenn de CHAURAND" />
   <meta name="google-site-verification" content="4-JjOpHNEKXlv04bs0XoGXzHdzj1YO-exyPqzpXy7TY" /> <!-- http://www.google.com/webmasters/tools/ -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ohmyfood! est une entreprise de réservation de restaurants et de composition de menus en ligne. Notre concept permet aux utilisateurs de réduire leur temps d’attente dans les restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte !" />
-  <meta name="keywords" content="Restauration, New-York, Ohmyfood!" />
+  <meta name="description" content="Ohmyfood! Les mentions légales" />
+  <meta name="keywords" content="Ohmyfood!, Mentions légales" />
 
   <!-- Facebook : Open Graph data -->
   <meta property="og:title" content="Ohmyfood!"/>
@@ -38,36 +38,21 @@
 <body>
   <header id="header"></header>
   <main>
-    <div class="search">
-
-    </div>
-    <div class="menu">
-      <a href="menu1.html">
-        <h3>La note enchantée</h3>
-        <h2>Menu</h2>
-      </a>
-    </div>
-    <div class="menu">
-      <a href="menu2.html">
-        <h3>Le chic à la française</h3>
-        <h2>Menu</h2>
-      </a>
-    </div>
-    <div class="menu">
-      <a href="menu3.html">
-        <h3>Le délice des papilles</h3>
-        <h2>Menu</h2>
-      </a>
-    </div>
-    <div class="menu">
-      <a href="menu4.html">
-        <h3>La palette du goût</h3>
-        <h2>Menu</h2>
-      </a>
-    </div>
-    <div class="soon">
-      <p>Prochainement <span>...</span></p>
-    </div>
+    <h1>Formulaire de contact</h1>
+    <form action="/ma-page-de-traitement" method="post">
+      <div>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="user_name">
+      </div>
+      <div>
+        <label for="mail">e-mail :</label>
+        <input type="email" id="mail" name="user_mail">
+      </div>
+      <div>
+        <label for="msg">Message :</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+    </form>
   </main>
   <footer id="footer"></footer>
 </body>
