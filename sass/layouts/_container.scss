@@ -1,0 +1,27 @@
+.container{
+    .menus{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content :center;
+        .menu{
+            text-align: center;
+            margin: 3%;
+            width: 40%;
+            height: 200px;
+            border: solid black;
+        }
+    }
+    .soon{
+        border-radius: 10px;
+        background: $color-primary;
+        width: 200px;
+        height: 50px;
+        margin: 5% auto ;
+        align-self: flex-end;
+        display: flex;
+        justify-content :center;
+        >p{
+            color: $color-secondary;
+        }
+    }
+}
