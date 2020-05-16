@@ -16,3 +16,10 @@
 @import "./pages/work";
 @import "./pages/about";
 @import "./pages/project";
+
+body{
+
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
