@@ -4,19 +4,19 @@
     content: "";
   }
   25% {
-    content: ".";
+    content: " .";
   }
   50% {
-    content: "..";
+    content: " ..";
   }
   75% {
-    content: "...";
+    content: " ...";
   }
   100% {
     content: "";
   }
 }
-/* wiggle footer */
+/* Footer : Tranblement Effet Wiggle */
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -88,7 +88,7 @@
 
 .container {
   font-family: "Montserrat";
-  padding-bottom: 10%;
+  padding-bottom: 20%;
   margin: 0 10%;
 }
 .container p {
@@ -127,6 +127,14 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+.container .restos .resto__un a {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 700ms;
+}
+.container .restos .resto__un a:hover {
+  transform: scale(1.25);
+}
 .container .restos .resto__un h2, .container .restos .resto__un p {
   color: #3C1218;
 }
@@ -144,6 +152,14 @@
 .container .restos .resto__deux p {
   font-weight: bold;
 }
+.container .restos .resto__deux a {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 700ms;
+}
+.container .restos .resto__deux a:hover {
+  transform: scale(1.25);
+}
 .container .restos .resto__deux h2, .container .restos .resto__deux p {
   color: #C77412;
 }
@@ -158,6 +174,14 @@
   background-color: #F9F9F9;
   filter: drop-shadow(1px 1px 1px grey);
 }
+.container .restos .resto__trois a {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 700ms;
+}
+.container .restos .resto__trois a:hover {
+  transform: scale(1.25);
+}
 .container .restos .resto__trois h2, .container .restos .resto__trois p {
   color: #0887FB;
 }
@@ -171,6 +195,14 @@
 .container .restos .resto__quatre {
   background-color: #FDFFFD;
   filter: drop-shadow(1px 1px 1px grey);
+}
+.container .restos .resto__quatre a {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 700ms;
+}
+.container .restos .resto__quatre a:hover {
+  transform: scale(1.25);
 }
 .container .restos .resto__quatre h2, .container .restos .resto__quatre p {
   color: #42973C;
@@ -195,9 +227,9 @@
 .container .soon > p {
   color: #fdcb46;
 }
-.container .soon span:after {
-  animation: PtsSuspension steps(1, end) 1s infinite;
-  content: "";
+.container .soon > p span:after {
+  animation: PtsSuspension steps(1, end) 2.5s infinite;
+  content: "   ";
 }
 .container .menu {
   padding-top: 2%;

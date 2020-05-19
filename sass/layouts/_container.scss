@@ -1,6 +1,6 @@
 .container{
     font-family: $font-primary;
-    padding-bottom: 10%;
+    padding-bottom: 20%;
     margin: 0 10%;
     p{
         text-align: center;
@@ -60,11 +60,10 @@
         justify-content :center;
         >p{
             color: $color-secondary;
-        }
-        span:after{
-            
-            animation: PtsSuspension steps(1, end) 1s infinite;
-            content: '';
+            span:after{          
+                animation: PtsSuspension steps(1, end) 2.5s infinite;
+                content: '   ';
+            }
         }
     }
     .menu{

@@ -1,5 +1,14 @@
 @mixin resto($bckgrnd-mn, $fnt-rst, $fnt-menu-sz, $fnt-mn, $clr-mn) {
     background-color: $bckgrnd-mn;
+    & a {
+        // Grossie la balise a sans grossir la balise parent
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 700ms;
+        &:hover {
+            transform: scale(1.25);
+        }
+    }
     filter: drop-shadow(1px 1px 1px grey);
     h2, p{
         color: $clr-mn;
