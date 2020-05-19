@@ -4,7 +4,8 @@
   "description": "\"\"",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style compressed"
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "Gwenn de CHAURAND",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/gwcch/dw-p3/issues"
   },
