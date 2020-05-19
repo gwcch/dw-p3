@@ -1,15 +1,24 @@
 #footer{
     position: fixed;
-    width: 97%;
-    z-index: 9999;
+    width: 100%;
     background: $color-primary;
-    padding: 0 2%;
-    margin: 0;
-    bottom: 0;
-    display: flex;
-    justify-content : space-between;
-  }
-  #footer a{
-      color: $color-secondary;
-      text-decoration: none;
-  }
+    margin: 0%;
+    bottom: 0%;
+    >div{
+        padding: 0 3%;
+        margin: 2% auto;
+        display: flex;
+        justify-content : space-between;
+        >a{
+            font-family: $font-primary;
+            font-weight: bold;
+            font-size: x-large;
+            color: $color-secondary;
+            text-decoration: none;
+            &:hover{
+                animation: shake 0.5s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+}
