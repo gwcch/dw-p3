@@ -11,14 +11,13 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./layouts/container";
-@import "./layouts/form";
+@import "./layouts/table";
 
 @import "./pages/work";
 @import "./pages/about";
 @import "./pages/project";
 
 body{
-
     margin: 0;
     display: flex;
     flex-direction: column;

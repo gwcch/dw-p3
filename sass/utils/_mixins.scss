@@ -1,0 +1,21 @@
+@mixin resto($bckgrnd-mn, $fnt-rst, $fnt-menu-sz, $fnt-mn, $clr-mn) {
+    background-color: $bckgrnd-mn;
+    filter: drop-shadow(1px 1px 1px grey);
+    h2, p{
+        color: $clr-mn;
+    }
+    h2{
+        font-family: $fnt-rst;
+    }
+    p{
+        font-family: $fnt-mn;
+        font-size: $fnt-menu-sz;
+    }
+}
+@mixin menu($bckgrnd-mnu, $fnt-rsto, $clr-mn) {
+    background-color: $bckgrnd-mnu;
+    h2{
+        font-family: $fnt-rsto;
+        color: $clr-mn;
+    }
+}
