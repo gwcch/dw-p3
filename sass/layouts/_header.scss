@@ -1,8 +1,19 @@
 #header{
   background: $color-primary;
+  width: 100%;
+  margin: 0 auto;
    img{
     width: 25%;
-    display: block;
     margin: 3% auto;
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  #header {
+    img {
+      display: flex;
+      justify-content: center;
+      
+    }
   }
 }

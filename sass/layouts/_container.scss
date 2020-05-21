@@ -1,15 +1,14 @@
 .container{
     font-family: $font-primary;
     padding-bottom: 20%;
-    margin: 0 10%;
-    p{
+    p {
         text-align: center;
         font-weight: bold;
         font-size: x-large;
     }
     .restos{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
         .resto{
             text-align: center;
@@ -48,21 +47,21 @@
                 @include resto($background-menu4, $font-resto4, $font-menu-size, $font-menu, $color-menu4);
             }
         }
-    }
-    .soon{
-        border-radius: 10px;
-        background: $color-primary;
-        width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        align-self: flex-end;
-        display: flex;
-        justify-content :center;
-        >p{
-            color: $color-secondary;
-            span:after{          
-                animation: PtsSuspension steps(1, end) 2.5s infinite;
-                content: '   ';
+        +.soon {
+            border-radius: 10px;
+            background: $color-primary;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            align-self: flex-end;
+            display: flex;
+            justify-content: center;
+            >p {
+                color: $color-secondary;
+                &:after {
+                    animation: PtsSuspension steps(1, end) 2.5s infinite;
+                    content: '   ';
+                }
             }
         }
     }
@@ -103,6 +102,37 @@
         }
         &__quatre {
             @include menu($background-menu4, $font-resto4, $color-menu4);
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+            margin: 0 10%;
+            .restos {
+                flex-wrap: wrap;
+            }
+    }
+}
+@media (max-width: 600px) {
+    .container{
+        font-size: x-small;
+        .restos{
+            display: block;
+            .resto{
+                width: 150px;
+                height: 200px;
+                margin: 2% auto;
+            }
+            + .soon {
+                width: 50%;
+                >p {
+                    font-size: small;
+                }
+            }
+        }
+        .menu{
+            width: 100%;
         }
     }
 }
