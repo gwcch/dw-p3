@@ -2,8 +2,8 @@
     position: fixed;
     width: 100%;
     background: $color-primary;
-    margin: 0%;
-    bottom: 0%;
+    margin: 0;
+    bottom: 0;
     >div{
         padding: 0 3%;
         margin: 2% auto;
@@ -18,6 +18,16 @@
             &:hover{
                 animation: shake 0.5s;
                 animation-iteration-count: infinite;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    #footer {
+        >div{
+            >a{
+                font-size: smaller;
+                text-align: center;
             }
         }
     }

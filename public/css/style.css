@@ -54,19 +54,27 @@
 }
 #header {
   background: #579c87;
+  width: 100%;
+  margin: 0 auto;
 }
 #header img {
   width: 25%;
-  display: block;
   margin: 3% auto;
+  display: block;
 }
 
+@media (max-width: 600px) {
+  #header img {
+    display: flex;
+    justify-content: center;
+  }
+}
 #footer {
   position: fixed;
   width: 100%;
   background: #579c87;
-  margin: 0%;
-  bottom: 0%;
+  margin: 0;
+  bottom: 0;
 }
 #footer > div {
   padding: 0 3%;
@@ -78,7 +86,7 @@
   font-family: "Montserrat";
   font-weight: bold;
   font-size: x-large;
-  color: #fdcb46;
+  color: #FCCA46;
   text-decoration: none;
 }
 #footer > div > a:hover {
@@ -86,10 +94,15 @@
   animation-iteration-count: infinite;
 }
 
+@media (max-width: 600px) {
+  #footer > div > a {
+    font-size: smaller;
+    text-align: center;
+  }
+}
 .container {
   font-family: "Montserrat";
   padding-bottom: 20%;
-  margin: 0 10%;
 }
 .container p {
   text-align: center;
@@ -98,7 +111,7 @@
 }
 .container .restos {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
 }
 .container .restos .resto {
@@ -214,7 +227,7 @@
   font-family: "Farsan";
   font-size: xx-large;
 }
-.container .soon {
+.container .restos + .soon {
   border-radius: 10px;
   background: #579c87;
   width: 300px;
@@ -224,10 +237,10 @@
   display: flex;
   justify-content: center;
 }
-.container .soon > p {
-  color: #fdcb46;
+.container .restos + .soon > p {
+  color: #FCCA46;
 }
-.container .soon > p span:after {
+.container .restos + .soon > p:after {
   animation: PtsSuspension steps(1, end) 2.5s infinite;
   content: "   ";
 }
@@ -285,6 +298,36 @@
   color: #42973C;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 10%;
+  }
+  .container .restos {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    font-size: x-small;
+  }
+  .container .restos {
+    display: block;
+  }
+  .container .restos .resto {
+    width: 150px;
+    height: 200px;
+    margin: 2% auto;
+  }
+  .container .restos + .soon {
+    width: 50%;
+  }
+  .container .restos + .soon > p {
+    font-size: small;
+  }
+  .container .menu {
+    width: 100%;
+  }
+}
 table {
   margin: 5% auto;
   width: 80%;
@@ -293,39 +336,51 @@ table img {
   height: 20%;
   margin: auto 3%;
 }
-table tr:hover {
-  background-color: #f2f2f2;
-}
-table th {
+table__un th {
   font-family: "Caveat";
   font-size: xx-large;
   height: 80px;
   vertical-align: bottom;
   text-align: center;
 }
-table td {
+table__un th > span {
+  text-decoration: none;
+}
+table__un th > span:after {
+  content: "";
+  display: flex;
+  height: 1px;
+  width: 0;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+table__un th > span:hover:after {
+  width: 100%;
+  background: #3C1218;
+}
+table__un td {
   height: 35px;
 }
 
-/* En column
-table{
+@media (max-width: 600px) {
+  table {
+    width: 100%;
     margin: 0 auto;
-    thead {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    tr{
-        display: flex;
-        justify-content: center;
-        flex-direction:column;
-    }
-    td{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-} */
+    text-align: center;
+  }
+  table tr {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  table td {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
 body {
   margin: 0;
   display: flex;
