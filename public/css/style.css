@@ -86,7 +86,7 @@
   font-family: "Montserrat";
   font-weight: bold;
   font-size: x-large;
-  color: #FCCA46;
+  color: #fdcb46;
   text-decoration: none;
 }
 #footer > div > a:hover {
@@ -238,7 +238,7 @@
   justify-content: center;
 }
 .container .restos + .soon > p {
-  color: #FCCA46;
+  color: #fdcb46;
 }
 .container .restos + .soon > p:after {
   animation: PtsSuspension steps(1, end) 2.5s infinite;
@@ -336,51 +336,39 @@ table img {
   height: 20%;
   margin: auto 3%;
 }
-table__un th {
+table tr:hover {
+  background-color: #f2f2f2;
+}
+table th {
   font-family: "Caveat";
   font-size: xx-large;
   height: 80px;
   vertical-align: bottom;
   text-align: center;
 }
-table__un th > span {
-  text-decoration: none;
-}
-table__un th > span:after {
-  content: "";
-  display: flex;
-  height: 1px;
-  width: 0;
-  transition-property: width;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
-}
-table__un th > span:hover:after {
-  width: 100%;
-  background: #3C1218;
-}
-table__un td {
+table td {
   height: 35px;
 }
 
-@media (max-width: 600px) {
-  table {
-    width: 100%;
+/* En column
+table{
     margin: 0 auto;
-    text-align: center;
-  }
-  table tr {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  table td {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-}
+    thead {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    tr{
+        display: flex;
+        justify-content: center;
+        flex-direction:column;
+    }
+    td{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+} */
 body {
   margin: 0;
   display: flex;
