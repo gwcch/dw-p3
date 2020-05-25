@@ -6,7 +6,6 @@ table{
         margin: auto 3%;
     }
     th{
-        //font-size: 200%;
         height: 80px;
         text-align: center;
         padding-bottom: 2%;
@@ -24,9 +23,11 @@ table{
         height: 35px;
         padding-bottom: 1%;
         font-size: 200%;
+        // Colonne des plats
         &:nth-child(1) {
             padding-right: 2%;
         }
+        // Colonne des prix
         &:nth-child(2){
             text-align: right;
             vertical-align: top;
@@ -54,9 +55,11 @@ table{
             text-align: center;
             display: flex;
             justify-content: center;
+            // Colonne des plats
             &:nth-child(1) {
                 height: auto;
             }
+            // Colonne des prix
             &:nth-child(2) {
                 justify-content: center;
             }

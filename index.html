@@ -7,6 +7,7 @@
  <!-- meta -->
  <meta charset="utf-8">
  <meta name="author" content="Gwenn de CHAURAND" />
+ <!-- Valider la propriété de votre site -->
  <meta name="google-site-verification" content="4-JjOpHNEKXlv04bs0XoGXzHdzj1YO-exyPqzpXy7TY" />
  <!-- http://www.google.com/webmasters/tools/ -->
  <meta name="description"
@@ -29,6 +30,7 @@
  <!-- Script -->
  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
  <!-- Chargement du header et footer -->
+ <!-- https://stackoverflow.com/questions/18712338/make-header-and-footer-files-to-be-included-in-multiple-html-pages -->
  <script>
    $(function () {
      $("#header").load("./model/header.html");
@@ -46,8 +48,10 @@
 </head>
 
 <body>
+  <!-- Integration du header via le script -->
   <header id="header"></header>
   <main class="container">
+    <!-- Ensemble des restos -->
     <div class="restos">
       <div class="resto resto__un">
         <a href="menu1.html" title="Menu : La note enchantée">
@@ -79,6 +83,7 @@
       <p>Prochainement </p>
     </div>
   </main>
+  <!-- Integration du footer via le script -->
   <footer id="footer"></footer>
 </body>
 </html>

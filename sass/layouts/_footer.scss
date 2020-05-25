@@ -15,6 +15,7 @@
             font-size: x-large;
             color: $color-secondary;
             text-decoration: none;
+            // Animation du footer
             &:hover{
                 animation: shake 0.5s;
                 animation-iteration-count: infinite;

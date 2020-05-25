@@ -6,10 +6,12 @@
         font-weight: bold;
         font-size: x-large;
     }
+    // Index Page des restos
     .restos{
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
+        // Index Chaque resto
         .resto{
             text-align: center;
             width: 20%;
@@ -53,6 +55,7 @@
                 @include resto($background-menu4, $font-resto4, $font-menu-size, $font-menu, $color-menu4);
             }
         }
+        // Prochainement
         +.soon {
             border-radius: 10px;
             background: $color-primary;
@@ -78,6 +81,7 @@
             }
         }
     }
+    //Pages de chaque menu
     .menu{
         height: auto;
         width: 85%;

@@ -2,7 +2,8 @@
 @mixin resto($bckgrnd-mn, $fnt-rst, $fnt-menu-sz, $fnt-mn, $clr-mn) {
     background-color: $bckgrnd-mn;
     & a {
-        // Grossie la balise a sans grossir la balise parent
+        // Grossir la balise a sans grossir la balise parent
+        //https://www.w3schools.com/howto/howto_css_zoom_hover.asp
         transform: scale(1);
         transition-property: transform;
         transition-duration: 700ms;
@@ -10,7 +11,7 @@
             transform: scale(1.25);
         }
     }
-    //Ombrage de chaque menu
+    //Ombrage de chaque menu appliquer à la class resto
     filter: drop-shadow(1px 1px 1px grey);
     h2, p{
         color: $clr-mn;
@@ -39,11 +40,12 @@
     }
 }
 //Animation du titre souligne des menus
+//https://www.grafikart.fr/tutoriels/hover-souligner-css-1178
 @mixin titre_souligne ($color){
     &__titre {
         color: inherit;
         text-decoration: none;
-        background: linear-gradient(to top, $color 0%, $color 4px, transparent 5px) no-repeat;
+        background: linear-gradient(to top, $color 0%, $color 10%, transparent 10.01%) no-repeat;
         background-size: 0 100%;
         transition: background-size .5s;
         &:hover {
