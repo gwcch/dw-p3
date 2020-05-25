@@ -1,3 +1,4 @@
+//Mise en forme du container
 @mixin resto($bckgrnd-mn, $fnt-rst, $fnt-menu-sz, $fnt-mn, $clr-mn) {
     background-color: $bckgrnd-mn;
     & a {
@@ -9,22 +10,44 @@
             transform: scale(1.25);
         }
     }
+    //Ombrage de chaque menu
     filter: drop-shadow(1px 1px 1px grey);
     h2, p{
         color: $clr-mn;
     }
     h2{
         font-family: $fnt-rst;
+        font-size: 175%;
     }
     p{
         font-family: $fnt-mn;
         font-size: $fnt-menu-sz;
     }
 }
-@mixin menu($bckgrnd-mnu, $fnt-rsto, $clr-mn) {
+//Mise en forme du tableau menu
+@mixin container_menu($bckgrnd-mnu, $fnt-rsto, $clr-mn, $fnt-corp) {
     background-color: $bckgrnd-mnu;
     h2{
-        font-family: $fnt-rsto;
         color: $clr-mn;
+        font-family: $fnt-rsto;
+    }
+    th{
+        font-family: $fnt-corp;
+    }
+    td{
+        font-family: $fnt-corp;
+    }
+}
+//Animation du titre souligne des menus
+@mixin titre_souligne ($color){
+    &__titre {
+        color: inherit;
+        text-decoration: none;
+        background: linear-gradient(to top, $color 0%, $color 4px, transparent 5px) no-repeat;
+        background-size: 0 100%;
+        transition: background-size .5s;
+        &:hover {
+            background-size: 100% 100%;
+        }
     }
 }
