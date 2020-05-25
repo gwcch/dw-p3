@@ -58,10 +58,14 @@
         }
         // Prochainement
         +.soon {
+            text-align: center;
+            font-weight: bold;
+            font-size: xx-large;
             border-radius: 10px;
             background: $color-primary;
             width: 300px;
-            padding-left: 90px;
+            padding-left: 30px;
+            margin-top: 5%;
             margin-left: auto;
             margin-right: auto;
             align-self: flex-end;
@@ -188,16 +192,16 @@
     .container {
         .restos {
             .resto {
-                width: 250px;
-                height: 300px;
-                margin: 2% auto;
+                width: 300px;
+                height: 350px;
+                margin: 5% auto;
             }
             +.soon {
                 width: 50%;
                 padding-left: 40px;
-
                 >p {
                     font-size: small;
+                    width: 300px;
                 }
             }
         }
