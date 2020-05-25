@@ -4,11 +4,11 @@
     & a {
         // Grossir la balise a sans grossir la balise parent
         //https://www.w3schools.com/howto/howto_css_zoom_hover.asp
-        transform: scale(1);
         transition-property: transform;
         transition-duration: 700ms;
         &:hover {
             transform: scale(1.25);
+            opacity: 0.5;
         }
     }
     //Ombrage de chaque menu appliquer à la class resto

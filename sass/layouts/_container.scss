@@ -69,6 +69,7 @@
                 color: $color-secondary;
                 &:after {
                     margin-right: 2px;
+                    //https://stackoverflow.com/questions/13014808/is-there-anyway-to-animate-an-ellipsis-with-css-animations/28074607
                     overflow: hidden;
                     display: inline-block;
                     vertical-align: bottom;
