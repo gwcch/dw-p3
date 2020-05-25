@@ -1,6 +1,6 @@
 .container{
     font-family: $font-primary;
-    padding-bottom: 20%;
+    padding-bottom: 30%;
     p {
         text-align: center;
         font-weight: bold;
@@ -12,8 +12,8 @@
         justify-content: center;
         .resto{
             text-align: center;
-            width: 250px;
-            height: 350px;
+            width: 20%;
+            height: 450px;
             margin: 3%;
             display: flex;
             justify-content: center;
@@ -39,6 +39,12 @@
                     font-weight: bold;
                 }
                 @include resto($background-menu2, $font-resto2, $font-menu-size, 'sans-serif', $color-menu2);
+                h2{
+                    //Degrader de couleur.
+                    background-image: linear-gradient(45deg, $color-menu2, $color-menu2-dessert);
+                    color: transparent;
+                    -webkit-background-clip: text;
+                }
             }
             &__trois{
                 @include resto($background-menu3, $font-resto3, $font-menu-size, $font-menu, $color-menu3);
@@ -51,27 +57,35 @@
             border-radius: 10px;
             background: $color-primary;
             width: 300px;
+            padding-left: 90px;
             margin-left: auto;
             margin-right: auto;
             align-self: flex-end;
             display: flex;
-            justify-content: center;
-            >p {
+            p{
                 color: $color-secondary;
                 &:after {
-                    animation: PtsSuspension steps(1, end) 2.5s infinite;
-                    content: '   ';
+                    margin-right: 2px;
+                    overflow: hidden;
+                    display: inline-block;
+                    vertical-align: bottom;
+                    //Animation Point de suspension
+                    animation: ellipsis steps(4, end) 1000ms infinite;
+                    content: "\2026";
+                    /* ascii code for the ellipsis character */
+                    width: 0px;
                 }
             }
         }
     }
     .menu{
-        padding-top: 2%;
-        margin: auto;
-        height: 900px;
+        height: auto;
         width: 85%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+        margin: auto;
         >h2{
-            font-size: xx-large;
+            font-size: 400%;
             text-align: center;
         }
         &__un{
@@ -82,12 +96,22 @@
                     display: block;
                 }
             }
-            @include menu($background-menu1, $font-resto1, $color-menu1);
+            &__entree{
+                @include titre_souligne($color-menu1);
+            }
+            &__plat {
+                @include titre_souligne($color-menu1);
+            }
+            &__dessert {
+                @include titre_souligne($color-menu1);
+            }
+            @include container_menu($background-menu1, $font-resto1, $color-menu1, $font-menu);
             footer{
+                text-align: center;
                 font-size: x-large;
                 font-family: $font-resto1;
                 display: flex;
-                justify-content:center;
+                justify-content: center;
                 img{
                     width: 30px;
                     display: block;
@@ -95,44 +119,99 @@
             }
         }
         &__deux {
-            @include menu($background-menu2, $font-resto2, $color-menu2);
+            @include container_menu($background-menu2, $font-resto2, $color-menu2, $font-menu);
+             h2 {
+                 //Degrader de couleur
+                background-image: linear-gradient(45deg, $color-menu2, $color-menu2-dessert);
+                color: transparent;
+                -webkit-background-clip: text;
+             }
+             &__entree {
+                 color: $color-menu2;
+                 @include titre_souligne($color-menu2);
+             }
+             &__plat {
+                 color: $color-menu2-plat;
+                 @include titre_souligne($color-menu2-plat);
+             }
+             &__dessert {
+                 color: $color-menu2-dessert;
+                 @include titre_souligne($color-menu2-dessert);
+             }
         }
         &__trois {
-            @include menu($background-menu3, $font-resto3, $color-menu3);
+            @include container_menu($background-menu3, $font-resto3, $color-menu3, $font-menu);
+            &__entree{
+                @include titre_souligne($color-menu3);
+            }
+            &__plat {
+                @include titre_souligne($color-menu3-plat);
+            }
+            &__dessert {
+                @include titre_souligne($color-menu3-dessert);
+            }
         }
         &__quatre {
-            @include menu($background-menu4, $font-resto4, $color-menu4);
+            @include container_menu($background-menu4, $font-resto4, $color-menu4, $font-menu);
+            &__entree{
+                @include titre_souligne($color-menu4);
+            }
+            &__plat {
+                @include titre_souligne($color-menu4);
+            }
+            &__dessert {
+                @include titre_souligne($color-menu4);
+            }
         }
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     .container {
-            margin: 0 10%;
             .restos {
                 flex-wrap: wrap;
+                margin: 2%;
+                .resto {
+                    width: 400px;
+                    height: 500px;
+                }
             }
     }
 }
-@media (max-width: 600px) {
-    .container{
-        font-size: x-small;
-        .restos{
-            display: block;
-            .resto{
-                width: 150px;
-                height: 200px;
+@media (max-width: 425px) {
+    .container {
+        .restos {
+            .resto {
+                width: 250px;
+                height: 300px;
                 margin: 2% auto;
             }
-            + .soon {
+            +.soon {
                 width: 50%;
+                padding-left: 40px;
+
                 >p {
                     font-size: small;
                 }
             }
         }
-        .menu{
+
+        .menu {
             width: 100%;
+        }
+    }
+}
+@media (max-width: 320px) {
+    .container{
+        .restos{
+            .resto{
+                font-size: x-small;
+                width: 200px;
+                height: 300px;
+            }
+            + .soon {
+                padding-left: 4px;
+            }
         }
     }
 }

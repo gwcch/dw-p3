@@ -4,40 +4,62 @@ table{
     img{
         height: 20%;
         margin: auto 3%;
-        //display: block;
-    }
-    tr:hover{
-        background-color: #f2f2f2;
     }
     th{
-        font-family: $font-resto1;
-        font-size: xx-large;
+        //font-size: 200%;
         height: 80px;
-        vertical-align: bottom;
         text-align: center;
-        // display: flex;
-        // justify-content: space-between;
+        padding-bottom: 2%;
+        font-size: 200%;
+        >span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            >img{
+                width: 20%;
+            }
+        }
     }
     td{
         height: 35px;
+        padding-bottom: 1%;
+        font-size: 200%;
+        &:nth-child(1) {
+            padding-right: 2%;
+        }
+        &:nth-child(2){
+            text-align: right;
+            vertical-align: top;
+        }
     }
 }
-/* En column
-table{
-    margin: 0 auto;
-    thead {
+
+@media (max-width: 425px) {
+    table{
+        margin: 0 auto;
         width: 100%;
-        display: flex;
-        justify-content: center;
+        tr{
+            display: flex;
+            justify-content: center;
+            flex-direction:column;
+        }
+        th {
+            display: flex;
+            justify-content: center;
+            >span > img{
+                display: none;
+            }
+        }
+        td{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            &:nth-child(1) {
+                height: auto;
+            }
+            &:nth-child(2) {
+                justify-content: center;
+            }
+        }
     }
-    tr{
-        display: flex;
-        justify-content: center;
-        flex-direction:column;
-    }
-    td{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-} */
+}
