@@ -39,15 +39,15 @@ table{
         th {
             font-size: 100%;
         }
+        td {
+            font-size: 75%;
+        }
     }
 }
 @media (max-width: 320px) {
     table{
         th{
             font-size: 100%;
-        }
-        td{
-            font-size: 75%;
         }
     }
 
