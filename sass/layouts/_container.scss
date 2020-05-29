@@ -4,7 +4,7 @@
     header {
         text-align: center;
         font-weight: bold;
-        font-size: xx-large;
+        font-size: 150%;
         margin: 5% auto;
     }
     // Index Page des restos
@@ -95,8 +95,9 @@
         padding-bottom: 5%;
         margin: auto;
         >h2{
-            font-size: 400%;
+            font-size: 275%;
             text-align: center;
+            padding: 0 5%;
         }
         &__un{
             &__illust{
@@ -178,18 +179,21 @@
 
 @media (max-width: 1366px) {
     .container {
-            .restos {
-                flex-wrap: wrap;
-                margin: 2%;
-                .resto {
-                    width: 400px;
-                    height: 500px;
-                }
+        .restos {
+            flex-wrap: wrap;
+            margin: 2%;
+            .resto {
+                width: 400px;
+                height: 500px;
             }
+        }
     }
 }
 @media (max-width: 768px) {
     .container {
+        header {
+            font-size: 100%;
+        }
         .restos {
             .resto {
                 width: 300px;
@@ -203,12 +207,6 @@
                     font-size: small;
                     width: 300px;
                 }
-            }
-        }
-
-        .menu {
-            >h2 {
-                font-size: 200%;
             }
         }
     }
