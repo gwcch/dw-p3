@@ -35,13 +35,13 @@
                     text-transform: uppercase;
                     font-weight: bold;
                 }
-                @include resto($background-menu1, $font-resto1, $font-menu-size, $font-menu, $color-menu1);
+                @include resto($size-resto, $background-menu1, $font-resto1, $font-menu-size, $font-menu, $color-menu1);
             }
             &__deux{
                 p {
                     font-weight: bold;
                 }
-                @include resto($background-menu2, $font-resto2, $font-menu-size, 'sans-serif', $color-menu2);
+                @include resto($size-resto, $background-menu2, $font-resto2, $font-menu-size, 'sans-serif', $color-menu2);
                 h2{
                     //Degrader de couleur.
                     background-image: linear-gradient(45deg, $color-menu2, $color-menu2-dessert);
@@ -50,10 +50,10 @@
                 }
             }
             &__trois{
-                @include resto($background-menu3, $font-resto3, $font-menu-size, $font-menu, $color-menu3);
+                @include resto(160%, $background-menu3, $font-resto3, $font-menu-size, $font-menu, $color-menu3);
             }
             &__quatre{
-                @include resto($background-menu4, $font-resto4, $font-menu-size, $font-menu, $color-menu4);
+                @include resto($size-resto+0%, $background-menu4, $font-resto4, $font-menu-size, $font-menu, $color-menu4);
             }
         }
         // Prochainement
@@ -207,9 +207,8 @@
         }
 
         .menu {
-            width: 100%;
             >h2 {
-                font-size: 300%;
+                font-size: 200%;
             }
         }
     }

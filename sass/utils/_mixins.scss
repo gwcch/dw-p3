@@ -1,5 +1,5 @@
 //Mise en forme du container
-@mixin resto($bckgrnd-mn, $fnt-rst, $fnt-menu-sz, $fnt-mn, $clr-mn) {
+@mixin resto($size, $bckgrnd-mn, $fnt-rst, $fnt-menu-sz, $fnt-mn, $clr-mn) {
     background-color: $bckgrnd-mn;
     & a {
         // Grossir la balise a sans grossir la balise parent
@@ -18,7 +18,7 @@
     }
     h2{
         font-family: $fnt-rst;
-        font-size: 175%;
+        font-size: $size;
     }
     p{
         font-family: $fnt-mn;

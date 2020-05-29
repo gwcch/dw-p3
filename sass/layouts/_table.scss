@@ -34,9 +34,28 @@ table{
         }
     }
 }
-
 @media (max-width: 768px) {
+    table {
+        th {
+            font-size: 150%;
+        }
+
+        td {
+            font-size: 125%;
+        }
+    }
+}
+@media (max-width: 320px) {
     table{
+        th{
+            font-size: 100%;
+        }
+        td{
+            font-size: 100%;
+        }
+    }
+
+    /*table{
         margin: 0 auto;
         width: 100%;
         tr{
@@ -65,4 +84,5 @@ table{
             }
         }
     }
-}
+    */
+} 
